@@ -1,0 +1,205 @@
+@import url('https://fonts.googleapis.com/css2?family=Familjen+Grotesk:wght@400;700&family=Space+Grotesk&display=swap');
+* *::after *::before{
+    margin: 0;
+    padding:0;
+    box-sizing:border-box;
+}
+body{
+    margin:0px;
+    background-color: black;
+    overflow-x: hidden
+}
+
+.header{
+    display: flex;
+    position: fixed;
+    justify-content: space-between;
+    width: 100%;
+    padding: 10px 30px ;
+    margin-top: 10px;
+    margin-left: 100px;
+    z-index: 3;
+}
+
+.Desktop-main-menu{
+    font-family: 'Familjen Grotesk', sans-serif;
+    color: white;
+    margin-right: 200px;
+    position: relative;
+}
+ul{
+    list-style: none;
+}
+a{
+    color: white;
+    text-decoration: none;
+}
+.logo{ 
+    height: auto;
+   width: 210px;
+   margin-top: 10px;
+}
+.logo img{
+    width:100%;
+}
+.Desktop-main-menu ul{
+ display: flex;
+ margin-right: 40px;
+
+}
+.Desktop-main-menu ul li{
+    margin-right: 40px;
+    position: relative;
+    padding-bottom: 2px;
+}
+.Desktop-main-menu ul li a::after{
+    position:absolute;
+    content: '';
+    height: 1px;
+    width: 100%;
+    background: white;
+    bottom: 0px;
+    left: 0px;
+    transform: scaleX(0);
+    transition: transform 0.6s cubic-bezier(0.19, 1, 0.22, 1);
+    transform-origin: right center;
+}
+.Desktop-main-menu ul li a:hover::after{
+    transform: scaleX(1);
+    transform-origin: left center;
+    transition-duration: 0.4s;
+}
+section{
+    background-position: center center;
+    height: 100vh;
+    position: relative;
+    background-size: cover;
+}
+.section-a{
+    background-image: url(images/sp1.jpg);
+}
+.section-b{
+    background-image: url(images/sp2.jpg);
+}
+.section-c{
+    background-image: url(images/sp3.jpg);
+}
+.section-d{
+    background-image: url(images/sp4.jpg);
+}
+.section-e{
+    background-image: url(images/sp5.jpg);
+}
+.section-f{
+    background-image: url(images/sp6.webp);
+}
+
+.inner-section{
+    position:relative;
+    top: 400px;
+    left: 50px;
+    margin-bottom: 40px;
+}
+.inner-section h2{
+    width: 520px;
+    height: auto;
+    margin: 5px 0px;
+    font-family: 'Familjen Grotesk', sans-serif;
+    font-weight: bolder;
+    font-size: 50px;
+    color: white;
+    max-width: 360px;
+    animation: fadeinUp 0.4s ease-in-out 0.2s ;
+    animation-fill-mode: both;
+}
+.inner-section h4{
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    color: white;
+    font-family: 'Familjen Grotesk', sans-serif;
+    margin:0px;
+    max-width: 360px;
+    animation: fadeinUp 0.4s ease-in-out ;
+    animation-fill-mode: both;
+}
+.inner-section a{
+    animation: fadeinUp 0.4s ease-in-out 0.4s;
+    animation-fill-mode: both;
+}
+
+.btn{
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    text-align: center;
+    min-width: 130px;
+    padding: 15px 20px;
+    margin-top: 20px;
+    border: 2px solid #fff;
+    text-transform: uppercase;
+    font-family: 'Familjen Grotesk', sans-serif;
+    font-weight: bold;
+    overflow: hidden;
+    z-index: 2;
+   }
+   .btn:hover span{
+    color:black;
+    z-index: 2;
+   }
+   .btn .hover{
+      position: absolute;
+      background: white;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      transform: translatey(100%);
+      z-index: -1;
+      transition: transform 0.6s cubic-bezier(0.19, 1, 0.22, 1);
+      transform-origin: top;
+   }
+   .btn:hover .hover{
+    transform: translatey(0%);
+    transform-origin: bottom;
+}
+@keyframes fadeinUp{
+    0%{
+        opacity:0;
+        transform: translateY(140px);
+    }
+    100%{
+        opacity:1;
+        transform: translateY(0px);
+    }
+}
+footer{
+    height: 50px;
+    
+    }
+.foot ul{
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    font-family: 'Familjen Grotesk', sans-serif;
+    font-size: small;
+    font-weight:bold;
+    color: rgb(255, 255, 255);
+}
+.foot ul li a{
+    margin-right: 20px;
+    transition: color 300ms ease-out 50ms;
+}
+.foot ul li a:hover{
+    color:rgb(165, 159, 159);
+}
+.foot span{
+    margin-right: 20px;
+    font-weight: lighter;
+}
+
+
+
+
